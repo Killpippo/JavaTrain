@@ -60,4 +60,11 @@ public class HelloWorld {
     public String getHtml() {
         return "<html><body><h1>Hello by Pippo!!</body></h1></html>";
     }
+    
+    @GET
+    @Produces("application/json")
+    @Path("json/{value}")
+    public String getJSON( @PathParam("value") int value ) {
+        return "{a:1, b:2, b:3, name:" + value / 2 + "}";
+    }
 }
