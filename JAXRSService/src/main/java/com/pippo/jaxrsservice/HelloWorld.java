@@ -65,6 +65,25 @@ public class HelloWorld {
     @Produces("application/json")
     @Path("json/{value}")
     public String getJSON( @PathParam("value") int value ) {
+        
+//        class CTest
+//        {
+//            public String sz;
+//            
+//            public CTest() {}
+//        };
+//        
+//        String szValue = "String";
+//        
+//        try
+//        {
+//            Class cls = Class.forName( szValue );
+//
+//            Object obj = (Object) cls.newInstance();
+//        }
+//        catch (IllegalAccessException | InstantiationException | ClassNotFoundException exc) {
+//        }
+                
         return "{a:1, b:2, b:3, name:" + value / 2 + "}";
     }
 }
